@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisafvaca/portfolio.git"
+  },
+  "author": "Luisa Fernanda Vaca Correa <luisafernanda9111@gmail.com> (https://github.com/luisafvaca)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisafvaca/portfolio/issues"
+  },
+  "homepage": "https://github.com/luisafvaca/portfolio#readme",
+  "dependencies": {
+    "json-loader": "0.5.4",
+    "react": "15.3.2",
+    "react-dom": "15.3.2"
+  }
+}
