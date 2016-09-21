@@ -1,12 +1,12 @@
 {
-  "content": {
-    "type": {
-      "image": {
-        "url": "https://c1.staticflickr.com/9/8207/29782805516_9c7782b2f7_k.jpg",
-        "data": "dia/mes/año",
-        "model": "name-model",
-        "description": "photo description"
-      }
+  "content": [
+    {
+      "type": "image",
+      "url": "https://c1.staticflickr.com/9/8207/29782805516_9c7782b2f7_k.jpg"
+    },
+    {
+      "type": "image",
+      "url": "https://c1.staticflickr.com/9/8414/28454271994_d2004ed612_k.jpg"
     }
-  }
+  ]
 }

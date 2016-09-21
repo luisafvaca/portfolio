@@ -1,9 +1,14 @@
 import React from 'react';
-import Fullviewport from './common/js/full-square.js';
+import FullViewportImg from './common/js/full-square';
+import './common/css/main.scss';
 
  var App = React.createClass({
   render() {
-    return <div> Hello world </div>
+    return (
+      <div>
+        <FullViewportImg />
+      </div>
+    )
   }
 })
 
