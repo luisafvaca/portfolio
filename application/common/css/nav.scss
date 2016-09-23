@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+
+$font-allura-qwigley: 'Julius Sans One', sans-serif;
+$font-primary-color: #fff;
+$font-primary-size: 90px;
+
 .nav {
   .nav-burger {
     position: absolute;
@@ -14,6 +20,7 @@
       height: 5px;
       position: absolute;
       transition: 0.5s;
+      transition-timing-function: ease-out;
     }
     span:nth-child(2) {
       transform: translate( 0px, 10px) rotate(180deg);
@@ -29,14 +36,25 @@
       height: 5px;
       position: absolute;
       transition: 0.5s;
+      transition-timing-function: ease-out;
     }
 
   }
   .nav-items {
     display: none;
-  }
-  .nav-item {
-
+    font-family: $font-allura-qwigley;
+    color: $font-primary-color;
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    cursor: pointer;
+    .nav-item  {
+      padding: 20px 20px 20px 70px;
+      text-align: start;
+      &:hover {
+        background-color: rgba(138, 139, 151, 0.1);
+      }
+    }
   }
   &.active {
     .nav-burger {
@@ -49,6 +67,9 @@
       span:nth-child(3) {
         transform: translate( 4px, 15px) rotate(50deg);
       }
+    }
+    .nav-items {
+      display: block;
     }
   }
 }

@@ -11,7 +11,7 @@ const HomePage = React.createClass ({
     const { title } = this.props;
     return(
       <section className={css('content')} style={{backgroundImage:`url(${getPictures(data)})`}}>
-        <Navbar items={ ['About me', 'Photography'] } />
+        <Navbar items={ ['About', 'Photography'] } />
         <h1 className={css('content-title')}> {title} </h1>
       </section>
     )
