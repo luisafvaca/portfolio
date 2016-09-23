@@ -1,5 +1,4 @@
 .nav {
-  position: absolute;
   .nav-burger {
     position: absolute;
     z-index: 100;
@@ -9,25 +8,27 @@
     top: 20px;
     cursor: pointer;
     span:nth-child(1) {
-      transform: translate(4px, 15px) rotate(180deg);
+      transform: translate(0px, 0px) rotate(180deg);
       background: #fff;
       width: 100%;
       height: 5px;
       position: absolute;
+      transition: 0.5s;
     }
     span:nth-child(2) {
-      transform: translate( 4px, 27px) rotate(180deg);
+      transform: translate( 0px, 10px) rotate(180deg);
       background: #fff;
       width: 100%;
       height: 5px;
       position: absolute;
     }
     span:nth-child(3) {
-      transform: translate( 4px, 39px) rotate(180deg);
+      transform: translate( 0px, 20px) rotate(180deg);
       background: #fff;
       width: 100%;
       height: 5px;
       position: absolute;
+      transition: 0.5s;
     }
 
   }
@@ -36,5 +37,18 @@
   }
   .nav-item {
 
+  }
+  &.active {
+    .nav-burger {
+      span:nth-child(1) {
+        transform: translate( 4px, 15px) rotate(135deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translate( 4px, 15px) rotate(50deg);
+      }
+    }
   }
 }

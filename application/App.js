@@ -6,7 +6,7 @@ import './common/css/main.scss';
   render() {
     return (
       <div>
-        <HomePage />
+        <HomePage title={'\"It was going to be a lonely trip back...\"'}/>
       </div>
     )
   }

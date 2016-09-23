@@ -5,11 +5,19 @@ import className from 'classnames/bind';
 const css = className.bind(style);
 
 const nav = React.createClass({
-  render() {
-    console.log(this.props)
+  getInitialState: function() {
+    return {active: false}
+  },
+  toggleNav: function(e) {
+    console.log(this);
+    e.preventDefault();
+    let currentState = this.state.active;
+    this.setState({active: !currentState});
+  },
+  render(){
     const { items } = this.props;
     return (
-      <nav className={css('nav')}>
+      <nav className={ css('nav', this.state.active ? 'active' : false) } onClick={this.toggleNav}>
         <div className={css('nav-burger')}>
           <span></span>
           <span></span>

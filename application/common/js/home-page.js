@@ -8,9 +8,11 @@ const css = className.bind(style);
 
 const HomePage = React.createClass ({
   render() {
+    const { title } = this.props;
     return(
       <section className={css('content')} style={{backgroundImage:`url(${getPictures(data)})`}}>
         <Navbar items={ ['About me', 'Photography'] } />
+        <h1 className={css('content-title')}> {title} </h1>
       </section>
     )
   }
