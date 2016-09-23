@@ -1,22 +1,23 @@
 import React from 'react';
 import data from '../../data/data.json';
-import style from '../css/fullScreenImg.scss';
+import style from '../css/home-page.scss';
 import className from 'classnames/bind';
+import Navbar from './nav-bar'
 
 const css = className.bind(style);
 
-const fullView = React.createClass ({
+const HomePage = React.createClass ({
   render() {
     return(
-      <section className={css('content')}>
-        <img className={css('content-img')} src={getPictures(data)}></img>
+      <section className={css('content')} style={{backgroundImage:`url(${getPictures(data)})`}}>
+        <Navbar items={ ['About me', 'Photography'] } />
       </section>
     )
   }
-
 })
 
-var getPictures = (dt) => {
+
+let getPictures = (dt) => {
   var arr = [],
       random;
   dt.content.map(function(a){
@@ -28,4 +29,4 @@ var getPictures = (dt) => {
   return random;
 }
 
-export default fullView;
+export default HomePage;

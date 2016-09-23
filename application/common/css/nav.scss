@@ -1,0 +1,40 @@
+.nav {
+  position: absolute;
+  .nav-burger {
+    position: absolute;
+    z-index: 100;
+    height: 40px;
+    width: 40px;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    span:nth-child(1) {
+      transform: translate(4px, 15px) rotate(180deg);
+      background: #fff;
+      width: 100%;
+      height: 5px;
+      position: absolute;
+    }
+    span:nth-child(2) {
+      transform: translate( 4px, 27px) rotate(180deg);
+      background: #fff;
+      width: 100%;
+      height: 5px;
+      position: absolute;
+    }
+    span:nth-child(3) {
+      transform: translate( 4px, 39px) rotate(180deg);
+      background: #fff;
+      width: 100%;
+      height: 5px;
+      position: absolute;
+    }
+
+  }
+  .nav-items {
+    display: none;
+  }
+  .nav-item {
+
+  }
+}
