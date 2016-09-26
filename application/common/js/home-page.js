@@ -3,7 +3,7 @@ import dataPick from '../../data/data.json';
 import style from '../css/home-page.scss';
 import className from 'classnames/bind';
 import Navbar from './nav-bar';
-import { getQuotes } from './quotes';
+import { getQuotes, getPictures } from './api';
 
 const css = className.bind(style);
 
@@ -29,18 +29,5 @@ const HomePage = React.createClass ({
     )
   }
 })
-
-
-let getPictures = (dt) => {
-  var arr = [],
-      random;
-  dt.content.map(function(a){
-    if(a.type === 'image'){
-      arr.push(a.url);
-    }
-  });
-  random = arr[Math.floor(Math.random() * arr.length)];
-  return random;
-}
 
 export default HomePage;
