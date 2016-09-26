@@ -1,18 +1,30 @@
 import React from 'react';
-import data from '../../data/data.json';
+import dataPick from '../../data/data.json';
 import style from '../css/home-page.scss';
 import className from 'classnames/bind';
-import Navbar from './nav-bar'
+import Navbar from './nav-bar';
+import { getQuotes } from './quotes';
 
 const css = className.bind(style);
 
 const HomePage = React.createClass ({
+  componentDidMount() {
+    return getQuotes().then((data) => {
+      this.setState({
+        contents: data.contents
+      });
+    });
+  },
+
   render() {
-    const { title } = this.props;
+    if (!this.state) return (<div></div>);
+
+    const { quotes } = this.state.contents || { quotes: [{ quote: this.props.title }]};
+
     return(
-      <section className={css('content')} style={{backgroundImage:`url(${getPictures(data)})`}}>
+      <section className={css('content')} style={{backgroundImage:`url(${getPictures(dataPick)})`}}>
         <Navbar items={ ['About', 'Photography'] } />
-        <h1 className={css('content-title')}> {title} </h1>
+        <h1 className={css('content-title')}> { quotes[0].quote } </h1>
       </section>
     )
   }
