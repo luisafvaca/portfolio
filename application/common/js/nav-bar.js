@@ -19,9 +19,9 @@ const nav = React.createClass({
     return (
       <nav className={ css('nav', this.state.active ? 'active' : false) } onClick={this.toggleNav}>
         <div className={css('nav-burger')}>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className={css('span-common')}></span>
+          <span className={css('span-common')}></span>
+          <span className={css('span-common')}></span>
         </div>
         <ul className={css('nav-items')}>
           {
