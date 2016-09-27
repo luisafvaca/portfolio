@@ -9,7 +9,7 @@ export function getQuotes () {
 export function getPictures (dt) {
   var arr = [],
       random;
-  dt.content.map(function(a){
+  dt.content.map( a => {
     if(a.type === 'image'){
       arr.push(a.url);
     }
